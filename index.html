@@ -1,0 +1,1670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Business Permits and Licensing Division – Cagayan de Oro City</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    /* ============================================================
+       CSS VARIABLES & RESET
+    ============================================================ */
+    :root {
+      --navy:     #0a1f44;
+      --blue:     #1a3a6b;
+      --mid-blue: #2258a8;
+      --sky:      #3a7bd5;
+      --gold:     #c9a227;
+      --gold-lt:  #f0c84a;
+      --white:    #ffffff;
+      --off-white:#f5f7fa;
+      --gray-lt:  #e8ecf2;
+      --gray:     #9aa3b2;
+      --text:     #1e2d45;
+      --text-mid: #4a5568;
+      --radius:   10px;
+      --shadow:   0 4px 24px rgba(10,31,68,.10);
+      --shadow-md:0 8px 40px rgba(10,31,68,.16);
+      --transition: .25s ease;
+      --max-w:    1120px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.65;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+
+    /* ============================================================
+       UTILITIES
+    ============================================================ */
+    .container { width: 100%; max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+    .section { padding: 72px 0; }
+    .section--alt { background: var(--off-white); }
+    .section-label {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .section-desc {
+      font-size: 1.05rem;
+      color: var(--text-mid);
+      max-width: 640px;
+    }
+    .section-header { margin-bottom: 48px; }
+    .divider {
+      width: 48px; height: 4px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-lt));
+      border-radius: 2px;
+      margin: 16px 0 0;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-weight: 600; font-size: .95rem;
+      cursor: pointer; border: none;
+      transition: var(--transition);
+      text-decoration: none;
+    }
+    .btn-primary {
+      background: var(--gold);
+      color: var(--navy);
+    }
+    .btn-primary:hover { background: var(--gold-lt); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(201,162,39,.35); }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid rgba(255,255,255,.7);
+      color: var(--white);
+    }
+    .btn-outline:hover { background: rgba(255,255,255,.15); transform: translateY(-2px); }
+    .btn-blue {
+      background: var(--mid-blue);
+      color: var(--white);
+    }
+    .btn-blue:hover { background: var(--sky); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(34,88,168,.3); }
+
+    /* ============================================================
+       HEADER / TOPBAR
+    ============================================================ */
+    .topbar {
+      background: var(--navy);
+      color: rgba(255,255,255,.75);
+      font-size: .8rem;
+      padding: 7px 0;
+    }
+    .topbar .container {
+      display: flex; align-items: center;
+      justify-content: space-between; gap: 12px;
+      flex-wrap: wrap;
+    }
+    .topbar a { color: inherit; }
+    .topbar a:hover { color: var(--gold-lt); }
+    .topbar-left { display: flex; align-items: center; gap: 16px; }
+    .topbar-right { display: flex; align-items: center; gap: 12px; }
+    .topbar-right a {
+      width: 26px; height: 26px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 50%;
+      background: rgba(255,255,255,.08);
+      transition: var(--transition);
+    }
+    .topbar-right a:hover { background: var(--gold); color: var(--navy); }
+
+    .navbar {
+      background: var(--white);
+      box-shadow: 0 2px 12px rgba(10,31,68,.08);
+      position: sticky; top: 0; z-index: 100;
+    }
+    .navbar .container {
+      display: flex; align-items: center;
+      justify-content: space-between;
+      height: 70px;
+    }
+    .nav-brand { display: flex; align-items: center; gap: 14px; }
+    .nav-logo {
+      width: 46px; height: 46px;
+      background: var(--navy);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem; font-weight: 700;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+    .nav-brand-text { line-height: 1.2; }
+    .nav-brand-text strong {
+      display: block;
+      font-family: 'Source Sans 3', sans-serif;
+      font-weight: 700; font-size: .95rem;
+      color: var(--navy);
+    }
+    .nav-brand-text span {
+      font-size: .78rem; color: var(--gray);
+    }
+    .nav-links { display: flex; align-items: center; gap: 4px; }
+    .nav-links a {
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: .9rem; font-weight: 600;
+      color: var(--text-mid);
+      transition: var(--transition);
+    }
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--mid-blue);
+      background: var(--gray-lt);
+    }
+    .nav-cta { margin-left: 12px; }
+    .hamburger {
+      display: none;
+      flex-direction: column; gap: 5px;
+      background: none; border: none; cursor: pointer;
+      padding: 6px;
+    }
+    .hamburger span {
+      width: 24px; height: 2px;
+      background: var(--navy);
+      border-radius: 2px;
+      transition: var(--transition);
+      display: block;
+    }
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background: var(--white);
+      border-top: 1px solid var(--gray-lt);
+      padding: 12px 24px 20px;
+      gap: 4px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      padding: 10px 12px;
+      border-radius: 6px;
+      font-size: .95rem; font-weight: 600;
+      color: var(--text-mid);
+    }
+    .mobile-menu a:hover { background: var(--gray-lt); color: var(--mid-blue); }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 55%, #1a4a8f 100%);
+      position: relative;
+      overflow: hidden;
+      padding: 96px 0 80px;
+      color: var(--white);
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 60% 80% at 80% 50%, rgba(58,123,213,.25) 0%, transparent 60%),
+        repeating-linear-gradient(
+          -45deg,
+          transparent,
+          transparent 40px,
+          rgba(255,255,255,.018) 40px,
+          rgba(255,255,255,.018) 41px
+        );
+      pointer-events: none;
+    }
+    .hero-pattern {
+      position: absolute; right: -80px; top: -80px;
+      width: 520px; height: 520px;
+      border-radius: 50%;
+      border: 90px solid rgba(201,162,39,.09);
+      pointer-events: none;
+    }
+    .hero-pattern2 {
+      position: absolute; left: -120px; bottom: -120px;
+      width: 420px; height: 420px;
+      border-radius: 50%;
+      border: 70px solid rgba(58,123,213,.12);
+      pointer-events: none;
+    }
+    .hero .container { position: relative; z-index: 1; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(201,162,39,.18);
+      border: 1px solid rgba(201,162,39,.4);
+      border-radius: 30px;
+      padding: 6px 16px;
+      font-size: .8rem; font-weight: 600;
+      letter-spacing: .08em;
+      color: var(--gold-lt);
+      margin-bottom: 24px;
+    }
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      line-height: 1.12;
+      font-weight: 700;
+      max-width: 700px;
+      margin-bottom: 10px;
+    }
+    .hero-title span { color: var(--gold-lt); }
+    .hero-subtitle {
+      font-size: 1.15rem;
+      color: rgba(255,255,255,.75);
+      max-width: 540px;
+      margin-bottom: 40px;
+      font-weight: 300;
+    }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .hero-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 64px;
+    }
+    .hero-card {
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.13);
+      border-radius: var(--radius);
+      padding: 20px;
+      backdrop-filter: blur(4px);
+      transition: var(--transition);
+    }
+    .hero-card:hover { background: rgba(255,255,255,.12); transform: translateY(-3px); }
+    .hero-card-icon {
+      width: 40px; height: 40px;
+      background: var(--gold);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+    }
+    .hero-card h4 {
+      font-size: .9rem; font-weight: 700;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+    .hero-card p { font-size: .8rem; color: rgba(255,255,255,.6); }
+
+    /* ============================================================
+       ANNOUNCEMENTS TICKER
+    ============================================================ */
+    .ticker-bar {
+      background: var(--gold);
+      color: var(--navy);
+      padding: 10px 0;
+      overflow: hidden;
+    }
+    .ticker-inner {
+      display: flex; align-items: center; gap: 0;
+    }
+    .ticker-label {
+      background: var(--navy);
+      color: var(--gold);
+      font-weight: 700; font-size: .78rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: 4px 16px;
+      flex-shrink: 0;
+      margin-right: 16px;
+      border-radius: 3px;
+    }
+    .ticker-track {
+      overflow: hidden;
+      flex: 1;
+    }
+    .ticker-content {
+      display: flex; gap: 48px;
+      animation: ticker 30s linear infinite;
+      white-space: nowrap;
+    }
+    .ticker-content:hover { animation-play-state: paused; }
+    .ticker-item {
+      font-size: .85rem; font-weight: 600;
+      flex-shrink: 0;
+    }
+    .ticker-item::before { content: '●  '; }
+    @keyframes ticker {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ============================================================
+       ABOUT / MISSION VISION
+    ============================================================ */
+    .mv-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 48px;
+    }
+    .mv-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 36px 32px;
+      box-shadow: var(--shadow);
+      border-top: 4px solid var(--mid-blue);
+      position: relative;
+      overflow: hidden;
+    }
+    .mv-card--vision { border-top-color: var(--gold); }
+    .mv-card-bg {
+      position: absolute; right: -20px; top: -20px;
+      font-size: 6rem; opacity: .04;
+      font-family: 'Playfair Display', serif;
+      color: var(--navy);
+      pointer-events: none;
+    }
+    .mv-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      color: var(--navy);
+      margin-bottom: 16px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .mv-card h3 .icon {
+      width: 34px; height: 34px;
+      background: var(--navy);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .9rem;
+      flex-shrink: 0;
+    }
+    .mv-card--vision h3 .icon { background: var(--gold); }
+    .mv-card p { font-size: .95rem; color: var(--text-mid); line-height: 1.75; }
+
+    .about-intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+    }
+    .about-intro-text p { color: var(--text-mid); margin-bottom: 16px; font-size: .98rem; }
+    .about-stats {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+    }
+    .stat-card {
+      background: var(--navy);
+      color: var(--white);
+      border-radius: var(--radius);
+      padding: 24px;
+      text-align: center;
+    }
+    .stat-card:nth-child(2) { background: var(--mid-blue); }
+    .stat-card:nth-child(3) { background: var(--gold); color: var(--navy); }
+    .stat-card:nth-child(4) { background: var(--blue); }
+    .stat-card .num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem; font-weight: 700;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat-card .lbl { font-size: .78rem; font-weight: 600; opacity: .85; }
+
+    /* ============================================================
+       REQUIREMENTS
+    ============================================================ */
+    .req-tabs {
+      display: flex; gap: 0;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+      border-bottom: 2px solid var(--gray-lt);
+    }
+    .req-tab {
+      padding: 12px 20px;
+      font-size: .9rem; font-weight: 600;
+      color: var(--text-mid);
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -2px;
+      transition: var(--transition);
+      background: none; border-top: none; border-left: none; border-right: none;
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .req-tab:hover { color: var(--mid-blue); }
+    .req-tab.active { color: var(--mid-blue); border-bottom-color: var(--mid-blue); }
+    .req-panel { display: none; }
+    .req-panel.active { display: block; }
+    .req-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .92rem;
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .req-table thead tr {
+      background: var(--navy);
+      color: var(--white);
+    }
+    .req-table th {
+      padding: 14px 20px;
+      text-align: left;
+      font-weight: 600;
+      font-size: .85rem;
+      letter-spacing: .04em;
+    }
+    .req-table tbody tr { border-bottom: 1px solid var(--gray-lt); }
+    .req-table tbody tr:last-child { border-bottom: none; }
+    .req-table tbody tr:nth-child(even) { background: var(--off-white); }
+    .req-table td { padding: 13px 20px; color: var(--text-mid); vertical-align: top; }
+    .req-table td:first-child { font-weight: 600; color: var(--text); }
+    .badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: .75rem; font-weight: 700;
+      letter-spacing: .04em;
+    }
+    .badge-req { background: #e8f0fe; color: var(--mid-blue); }
+    .badge-opt { background: #e6f4ea; color: #1e7e34; }
+    .note-box {
+      background: #fff8e6;
+      border-left: 4px solid var(--gold);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 16px 20px;
+      margin-top: 20px;
+      font-size: .88rem;
+      color: #6b4c00;
+    }
+
+    /* ============================================================
+       DOWNLOADABLE FORMS
+    ============================================================ */
+    .forms-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .form-card {
+      background: var(--white);
+      border: 1px solid var(--gray-lt);
+      border-radius: var(--radius);
+      padding: 24px;
+      display: flex; flex-direction: column;
+      gap: 12px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    .form-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .form-card-icon {
+      width: 48px; height: 48px;
+      background: var(--off-white);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+    }
+    .form-card h4 { font-size: 1rem; font-weight: 700; color: var(--navy); }
+    .form-card p { font-size: .85rem; color: var(--text-mid); flex: 1; }
+    .form-card .btn { align-self: flex-start; font-size: .85rem; padding: 9px 18px; }
+    .forms-note {
+      background: var(--off-white);
+      border: 1px dashed var(--gray);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin-top: 24px;
+      font-size: .88rem;
+      color: var(--text-mid);
+    }
+
+    /* ============================================================
+       GRADUATED FEES
+    ============================================================ */
+    .fees-intro {
+      background: var(--navy);
+      color: var(--white);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      margin-bottom: 32px;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 20px; flex-wrap: wrap;
+    }
+    .fees-intro p { font-size: .95rem; opacity: .8; max-width: 560px; }
+    .fees-table-wrap { overflow-x: auto; border-radius: var(--radius); box-shadow: var(--shadow); }
+    .fees-table {
+      width: 100%; min-width: 560px;
+      border-collapse: collapse;
+      font-size: .9rem;
+    }
+    .fees-table thead tr { background: var(--mid-blue); color: var(--white); }
+    .fees-table th { padding: 14px 20px; text-align: left; font-weight: 600; font-size: .85rem; }
+    .fees-table tbody tr { border-bottom: 1px solid var(--gray-lt); }
+    .fees-table tbody tr:hover { background: #eef3fb; }
+    .fees-table tbody tr:last-child { border-bottom: none; }
+    .fees-table td { padding: 12px 20px; color: var(--text-mid); }
+    .fees-table td:last-child { color: var(--mid-blue); font-weight: 700; }
+    .fees-table tfoot tr { background: var(--navy); color: var(--white); }
+    .fees-table tfoot td { padding: 12px 20px; font-weight: 600; font-size: .88rem; opacity: .85; }
+    .fees-placeholder {
+      border: 2px dashed var(--gray);
+      border-radius: var(--radius);
+      padding: 48px;
+      text-align: center;
+      color: var(--gray);
+    }
+    .fees-placeholder .big-icon { font-size: 2.5rem; margin-bottom: 12px; }
+    .fees-placeholder p { font-size: .9rem; }
+
+    /* ============================================================
+       ANNOUNCEMENTS
+    ============================================================ */
+    .announcements-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 32px;
+      align-items: start;
+    }
+    .ann-list { display: flex; flex-direction: column; gap: 16px; }
+    .ann-card {
+      background: var(--white);
+      border: 1px solid var(--gray-lt);
+      border-radius: var(--radius);
+      padding: 22px 24px;
+      display: flex; gap: 16px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    .ann-card:hover { border-color: var(--sky); transform: translateX(4px); }
+    .ann-tag-col { flex-shrink: 0; }
+    .ann-tag {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: .72rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .06em;
+      width: 80px; text-align: center;
+    }
+    .ann-tag--advisory { background: #fff3cd; color: #856404; }
+    .ann-tag--deadline { background: #f8d7da; color: #721c24; }
+    .ann-tag--update   { background: #d1ecf1; color: #0c5460; }
+    .ann-tag--schedule { background: #d4edda; color: #155724; }
+    .ann-date { font-size: .75rem; color: var(--gray); margin-top: 6px; text-align: center; }
+    .ann-body h4 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .ann-body p  { font-size: .88rem; color: var(--text-mid); }
+    .ann-body a  { color: var(--mid-blue); font-weight: 600; font-size: .85rem; margin-top: 8px; display: inline-block; }
+    .ann-sidebar-card {
+      background: var(--navy);
+      color: var(--white);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      margin-bottom: 16px;
+    }
+    .ann-sidebar-card h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      margin-bottom: 16px;
+      color: var(--gold-lt);
+    }
+    .quick-links { display: flex; flex-direction: column; gap: 8px; }
+    .quick-link {
+      display: flex; align-items: center; gap: 10px;
+      padding: 10px 14px;
+      background: rgba(255,255,255,.07);
+      border-radius: 6px;
+      font-size: .88rem; font-weight: 600;
+      color: rgba(255,255,255,.85);
+      transition: var(--transition);
+    }
+    .quick-link:hover { background: var(--gold); color: var(--navy); }
+    .office-hours-card {
+      background: var(--gold);
+      color: var(--navy);
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+    .office-hours-card h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem; margin-bottom: 14px;
+    }
+    .hours-row { display: flex; justify-content: space-between; font-size: .85rem; padding: 5px 0; border-bottom: 1px solid rgba(0,0,0,.1); }
+    .hours-row:last-child { border-bottom: none; }
+    .hours-row strong { font-weight: 700; }
+
+    /* ============================================================
+       CONTACT
+    ============================================================ */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .contact-info-block { display: flex; flex-direction: column; gap: 20px; }
+    .contact-item {
+      display: flex; gap: 16px; align-items: flex-start;
+    }
+    .contact-icon {
+      width: 44px; height: 44px;
+      background: var(--off-white);
+      border: 1px solid var(--gray-lt);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .contact-item h4 { font-size: .82rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--gray); margin-bottom: 4px; }
+    .contact-item p, .contact-item a { font-size: .95rem; color: var(--text); font-weight: 400; }
+    .contact-item a:hover { color: var(--mid-blue); }
+    .social-row { display: flex; gap: 12px; margin-top: 8px; }
+    .social-btn {
+      display: flex; align-items: center; gap: 8px;
+      padding: 9px 16px;
+      border-radius: 6px;
+      font-size: .85rem; font-weight: 600;
+      transition: var(--transition);
+      color: var(--white);
+    }
+    .social-btn--fb  { background: #1877f2; }
+    .social-btn--x   { background: #000; }
+    .social-btn--ig  { background: linear-gradient(135deg,#f58529,#dd2a7b,#8134af,#515bd4); }
+    .social-btn--yt  { background: #ff0000; }
+    .social-btn:hover { opacity: .85; transform: translateY(-2px); }
+    .contact-form-card {
+      background: var(--white);
+      border: 1px solid var(--gray-lt);
+      border-radius: var(--radius);
+      padding: 36px 32px;
+      box-shadow: var(--shadow);
+    }
+    .contact-form-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem; color: var(--navy);
+      margin-bottom: 24px;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label {
+      display: block;
+      font-size: .82rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .07em;
+      color: var(--text-mid);
+      margin-bottom: 6px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1.5px solid var(--gray-lt);
+      border-radius: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: .93rem;
+      color: var(--text);
+      transition: var(--transition);
+      background: var(--off-white);
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--sky);
+      background: var(--white);
+      box-shadow: 0 0 0 3px rgba(58,123,213,.1);
+    }
+    .form-group textarea { resize: vertical; min-height: 110px; }
+
+    /* ============================================================
+       MAP PLACEHOLDER
+    ============================================================ */
+    .map-placeholder {
+      background: var(--off-white);
+      border: 1px solid var(--gray-lt);
+      border-radius: var(--radius);
+      height: 280px;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 12px;
+      color: var(--gray);
+      margin-bottom: 24px;
+    }
+    .map-placeholder .map-icon { font-size: 2.5rem; }
+    .map-placeholder p { font-size: .88rem; text-align: center; }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    .footer {
+      background: var(--navy);
+      color: rgba(255,255,255,.75);
+      padding: 56px 0 0;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.4fr;
+      gap: 40px;
+      padding-bottom: 48px;
+    }
+    .footer-brand-logo {
+      width: 54px; height: 54px;
+      background: rgba(255,255,255,.08);
+      border: 2px solid rgba(201,162,39,.4);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem; font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+    .footer-brand h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem; color: var(--white);
+      margin-bottom: 6px;
+    }
+    .footer-brand p { font-size: .82rem; line-height: 1.7; max-width: 260px; }
+    .footer h4 {
+      font-size: .8rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .12em;
+      color: var(--gold-lt);
+      margin-bottom: 16px;
+    }
+    .footer-links { display: flex; flex-direction: column; gap: 8px; }
+    .footer-links a { font-size: .88rem; transition: var(--transition); }
+    .footer-links a:hover { color: var(--gold-lt); }
+    .footer-social { display: flex; gap: 10px; margin-top: 8px; }
+    .footer-social a {
+      width: 34px; height: 34px;
+      background: rgba(255,255,255,.07);
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .85rem;
+      transition: var(--transition);
+    }
+    .footer-social a:hover { background: var(--gold); color: var(--navy); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.1);
+      padding: 20px 0;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 12px;
+      font-size: .8rem;
+    }
+    .footer-bottom a { opacity: .6; transition: var(--transition); }
+    .footer-bottom a:hover { opacity: 1; color: var(--gold-lt); }
+
+    /* ============================================================
+       BACK TO TOP
+    ============================================================ */
+    .back-top {
+      position: fixed; right: 24px; bottom: 28px;
+      width: 44px; height: 44px;
+      background: var(--mid-blue);
+      color: var(--white);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      box-shadow: var(--shadow-md);
+      cursor: pointer;
+      transition: var(--transition);
+      opacity: 0; pointer-events: none;
+      border: none;
+      z-index: 200;
+    }
+    .back-top.show { opacity: 1; pointer-events: all; }
+    .back-top:hover { background: var(--gold); color: var(--navy); transform: translateY(-3px); }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 900px) {
+      .mv-grid, .about-intro, .contact-grid { grid-template-columns: 1fr; }
+      .announcements-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .navbar .container { flex-wrap: wrap; }
+      .fees-table td:nth-child(3), .fees-table th:nth-child(3) { display: none; }
+    }
+    @media (max-width: 560px) {
+      .hero { padding: 64px 0 56px; }
+      .hero-cards { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .topbar .container { justify-content: center; }
+      .topbar-left { display: none; }
+      .section { padding: 48px 0; }
+    }
+
+    /* ============================================================
+       EDIT HINTS (visible only in "edit mode")
+    ============================================================ */
+    .edit-hint {
+      display: none;
+      font-size: .72rem;
+      color: #fff;
+      background: #e53e3e;
+      border-radius: 3px;
+      padding: 2px 8px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== TOPBAR ===== -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <span>📍 Capistrano-Hayes St., Brgy. 2, City Hall Compound, CDO City</span>
+      <span>📞 0936-788-8793 / 0946-807-1193</span>
+    </div>
+    <div class="topbar-right">
+      <a href="https://facebook.com" target="_blank" title="Facebook">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      </a>
+      <a href="https://twitter.com" target="_blank" title="X/Twitter">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4l16 16M20 4 4 20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+      </a>
+      <a href="https://instagram.com" target="_blank" title="Instagram">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a href="https://youtube.com" target="_blank" title="YouTube">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="#home" class="nav-brand">
+      <div class="nav-logo">BPLD</div>
+      <div class="nav-brand-text">
+        <strong>Business Permits &amp; Licensing Division</strong>
+        <span>Cagayan de Oro City</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#requirements">Requirements</a>
+      <a href="#forms">Forms</a>
+      <a href="#fees">Fees</a>
+      <a href="#announcements">Announcements</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="#contact" class="btn btn-primary nav-cta" style="margin-left:16px;">Contact Us</a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#home">Home</a>
+    <a href="#about">About BPLD</a>
+    <a href="#requirements">Requirements</a>
+    <a href="#forms">Downloadable Forms</a>
+    <a href="#fees">Graduated Fees</a>
+    <a href="#announcements">Announcements</a>
+    <a href="#contact">Contact Us</a>
+  </div>
+</nav>
+
+<!-- ===== TICKER ===== -->
+<div class="ticker-bar">
+  <div class="container">
+    <div class="ticker-inner">
+      <div class="ticker-label">Updates</div>
+      <div class="ticker-track">
+        <div class="ticker-content" id="ticker">
+          <span class="ticker-item">Business Permit Renewal Period is now open — visit the BOSS Office at City Hall Compound</span>
+          <span class="ticker-item">New requirements for 2025 Business Permit Renewal are now available</span>
+          <span class="ticker-item">Online appointment scheduling is now available — contact our office for details</span>
+          <span class="ticker-item">Deadline reminder: Submit all renewal documents before the cut-off date to avoid penalties</span>
+          <span class="ticker-item">BPLD is now accepting walk-in applications during regular office hours (Mon–Fri, 8AM–5PM)</span>
+          <!-- Duplicated for seamless loop -->
+          <span class="ticker-item">Business Permit Renewal Period is now open — visit the BOSS Office at City Hall Compound</span>
+          <span class="ticker-item">New requirements for 2025 Business Permit Renewal are now available</span>
+          <span class="ticker-item">Online appointment scheduling is now available — contact our office for details</span>
+          <span class="ticker-item">Deadline reminder: Submit all renewal documents before the cut-off date to avoid penalties</span>
+          <span class="ticker-item">BPLD is now accepting walk-in applications during regular office hours (Mon–Fri, 8AM–5PM)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="hero-pattern"></div>
+  <div class="hero-pattern2"></div>
+  <div class="container">
+    <div class="hero-badge">🏛️ Official Website — Cagayan de Oro City</div>
+    <h1 class="hero-title">
+      Business Permits<br>&amp; Licensing<br><span>Division</span>
+    </h1>
+    <p class="hero-subtitle">
+      Serving the business community of Cagayan de Oro City with efficient, transparent, and accessible permit processing services.
+    </p>
+    <div class="hero-actions">
+      <a href="#forms" class="btn btn-primary">
+        📄 Download Business Permit Form
+      </a>
+      <a href="#forms" class="btn btn-outline">
+        📋 Download Survey Form
+      </a>
+      <a href="#requirements" class="btn btn-outline">
+        📌 View Requirements
+      </a>
+      <a href="#contact" class="btn btn-outline">
+        ✉️ Contact Us
+      </a>
+    </div>
+    <div class="hero-cards">
+      <div class="hero-card">
+        <div class="hero-card-icon">📝</div>
+        <h4>New Application</h4>
+        <p>First-time business permit applicants</p>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-icon">🔄</div>
+        <h4>Renewal</h4>
+        <p>Annual renewal for existing businesses</p>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-icon">📂</div>
+        <h4>Business Retirement</h4>
+        <p>Officially close or retire a business</p>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-icon">✏️</div>
+        <h4>Change of Information</h4>
+        <p>Update business details on record</p>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-icon">🪙</div>
+        <h4>Special Permit</h4>
+        <p>Mayor's permit &amp; other special licenses</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="about-intro">
+      <div class="about-intro-text">
+        <div class="section-label">About Us</div>
+        <h2 class="section-title">Business Permits &amp; Licensing Division</h2>
+        <div class="divider"></div>
+        <br>
+        <p>
+          The Business Permits and Licensing Division (BPLD) is the office of the City Government of Cagayan de Oro responsible for the issuance, renewal, and administration of business permits and licenses within the city.
+        </p>
+        <p>
+          Located at the BOSS Office (Business One-Stop Shop) inside the Cagayan de Oro City Hall Compound, we are committed to providing fast, transparent, and accessible services to all business owners and applicants.
+        </p>
+        <p>
+          We serve as the primary gateway for anyone looking to legally operate a business within the jurisdiction of Cagayan de Oro City, ensuring compliance with local ordinances and national regulations.
+        </p>
+        <br>
+        <a href="#requirements" class="btn btn-blue">View All Requirements →</a>
+      </div>
+      <div class="about-stats">
+        <div class="stat-card">
+          <div class="num">10,000+</div>
+          <div class="lbl">Businesses Licensed</div>
+        </div>
+        <div class="stat-card">
+          <div class="num">5</div>
+          <div class="lbl">Types of Permits</div>
+        </div>
+        <div class="stat-card">
+          <div class="num">1 Stop</div>
+          <div class="lbl">BOSS Office</div>
+        </div>
+        <div class="stat-card">
+          <div class="num">M–F</div>
+          <div class="lbl">8 AM – 5 PM</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mv-grid">
+      <div class="mv-card">
+        <div class="mv-card-bg">Mission</div>
+        <h3>
+          <span class="icon">🎯</span>
+          Our Mission
+        </h3>
+        <p>
+          To provide a simplified and streamlined system for the processing and issuance of business permits and other licenses within the jurisdiction of Cagayan de Oro City, ensuring compliance with all rules and regulations governing business operations, and promoting growth and development of the city's economy.
+        </p>
+      </div>
+      <div class="mv-card mv-card--vision">
+        <div class="mv-card-bg">Vision</div>
+        <h3>
+          <span class="icon" style="background:var(--gold);color:var(--navy);">🌟</span>
+          Our Vision
+        </h3>
+        <p>
+          To be the leading Local Government Unit in the country in providing efficient business permit and licensing services. To be recognized for our excellent customer-centric approach, prompt processes, and commitment to ensuring the welfare of the public through innovative practices.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REQUIREMENTS ===== -->
+<section class="section section--alt" id="requirements">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">What You Need</div>
+      <h2 class="section-title">Business Permit Requirements</h2>
+      <div class="divider"></div>
+      <p class="section-desc" style="margin-top:16px;">Select the type of transaction below to view the complete list of documentary requirements.</p>
+    </div>
+
+    <div class="req-tabs">
+      <button class="req-tab active" data-tab="new">New Application</button>
+      <button class="req-tab" data-tab="renewal">Renewal</button>
+      <button class="req-tab" data-tab="retirement">Business Retirement</button>
+      <button class="req-tab" data-tab="change">Change of Information</button>
+      <button class="req-tab" data-tab="special">Special Permit</button>
+    </div>
+
+    <!-- NEW APPLICATION -->
+    <div class="req-panel active" id="tab-new">
+      <table class="req-table">
+        <thead>
+          <tr><th>#</th><th>Documentary Requirement</th><th>Copies</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Duly accomplished Business Permit Application Form</td><td>1 original</td><td><span class="badge badge-req">Required</span></td></tr>
+          <tr><td>2</td><td>Barangay Clearance / Barangay Business Permit</td><td>1 original</td><td><span class="badge badge-req">Required</span></td></tr>
+          <tr><td>3</td><td>DTI Certificate of Business Name (for sole proprietors) or SEC Certificate of Incorporation (for corporations/partnerships)</td><td>1 photocopy</td><td><span class="badge badge-req">Required</span></td></tr>
+          <tr><td>4</td><td>Community Tax Certificate (Cedula)</td><td>1 original</td><td><span class="badge badge-req">Required</span></td></tr>
+          <tr><td>5</td><td>Contract of Lease (if renting) or Transfer Certificate of Title / Tax Declaration (if owned)</td><td>1 photocopy</td><td><span class="badge badge-req">Required</span></td></tr>
+          <tr><td>6</td><td>Locational Clearance / Zoning Clearance</td><td>1 original</td><td><span class="badge badge-req">Required</span></td></tr>
+          <tr><td>7</td><td>Sanitary Permit (from City Health Office)</td><td>1 original</td><td><span class="badge badge-req">Required</span></td></tr>
+          <tr><td>8</td><td>Fire Safety Inspection Certificate (FSIC) from BFP</td><td>1 original</td><td><span class="badge badge-req">Required</span></td></tr>
+          <tr><td>9</td><td>Building Permit (for new structures)</td><td>1 photocopy</td><td><span class="badge badge-opt">If applicable</span></td></tr>
+          <tr><td>10</td><td>Environmental Compliance Certificate (for businesses requiring ECC)</td><td>1 photocopy</td><td><span class="badge badge-opt">If applicable</span></td></tr>
+        </tbody>
+      </table>
+      <div class="note-box">⚠️ <strong>Note:</strong> Additional requirements may be requested depending on the nature of the business. All photocopies must be clear and legible. Submit requirements to the BOSS Office at City Hall Compound.</div>
+    </div>
+
+    <!-- RENEWAL -->
+    <div class="req-panel" id="tab-renewal">
+      <table class="req-table">
+        <thead>
+          <tr><th>#</th><th>Documentary Requirement</th><th>Copies</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Duly accomplished Business Permit Renewal Form</td><td>1 original</td><td><span class="badge badge-req">Required</span></td></tr>
+          <tr><td>2</td><td>Previous year's Business Permit (original or photocopy)</td><td>1 copy</td><td><span class="badge badge-req">Required</span></td></tr>
+          <tr><td>3</td><td>Barangay Clearance / Barangay Business Permit (current year)</td><td>1 original</td><td><span class="badge badge-req">Required</span></td></tr>
+          <tr><td>4</td><td>Official Receipts of taxes paid for the previous year</td><td>1 photocopy</td><td><span class="badge badge-req">Required</span></td></tr>
+          <tr><td>5</td><td>Latest Audited Financial Statement (AFS) or Gross Sales Declaration</td><td>1 original</td><td><span class="badge badge-req">Required</span></td></tr>
+          <tr><td>6</td><td>Fire Safety Inspection Certificate (FSIC) — current year</td><td>1 original</td><td><span class="badge badge-req">Required</span></td></tr>
+          <tr><td>7</td><td>Sanitary Permit (current year)</td><td>1 original</td><td><span class="badge badge-req">Required</span></td></tr>
+          <tr><td>8</td><td>Community Tax Certificate (Cedula)</td><td>1 original</td><td><span class="badge badge-req">Required</span></td></tr>
+        </tbody>
+      </table>
+      <div class="note-box">📅 <strong>Renewal Period:</strong> Business permit renewal is conducted every January. Late renewals are subject to surcharge and penalties. Please renew on time to avoid additional fees.</div>
+    </div>
+
+    <!-- RETIREMENT -->
+    <div class="req-panel" id="tab-retirement">
+      <table class="req-table">
+        <thead>
+          <tr><th>#</th><th>Documentary Requirement</th><th>Copies</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Duly accomplished Business Retirement Application Form</td><td>1 original</td><td><span class="badge badge-req">Required</span></td></tr>
+          <tr><td>2</td><td>Original copy of the Business Permit</td><td>1 original</td><td><span class="badge badge-req">Required</span></td></tr>
+          <tr><td>3</td><td>Sworn Statement of Gross Sales/Receipts from date of last renewal to date of closure</td><td>1 original</td><td><span class="badge badge-req">Required</span></td></tr>
+          <tr><td>4</td><td>Latest Audited Financial Statement or Income Tax Return</td><td>1 photocopy</td><td><span class="badge badge-req">Required</span></td></tr>
+          <tr><td>5</td><td>Barangay Clearance confirming cessation of business operations</td><td>1 original</td><td><span class="badge badge-req">Required</span></td></tr>
+          <tr><td>6</td><td>Proof of payment of all outstanding taxes and fees</td><td>1 photocopy</td><td><span class="badge badge-req">Required</span></td></tr>
+          <tr><td>7</td><td>Valid ID of the owner/authorized representative</td><td>1 photocopy</td><td><span class="badge badge-req">Required</span></td></tr>
+        </tbody>
+      </table>
+      <div class="note-box">ℹ️ <strong>Note:</strong> Business retirement must be processed officially to avoid continued assessment of taxes. All outstanding obligations must be settled before retirement is approved.</div>
+    </div>
+
+    <!-- CHANGE OF INFO -->
+    <div class="req-panel" id="tab-change">
+      <table class="req-table">
+        <thead>
+          <tr><th>#</th><th>Documentary Requirement</th><th>Copies</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Letter of Request indicating the change/s to be made</td><td>1 original</td><td><span class="badge badge-req">Required</span></td></tr>
+          <tr><td>2</td><td>Original Business Permit to be amended</td><td>1 original</td><td><span class="badge badge-req">Required</span></td></tr>
+          <tr><td>3</td><td>Supporting document for the change (e.g., new DTI for name change, new lease for address change)</td><td>1 photocopy</td><td><span class="badge badge-req">Required</span></td></tr>
+          <tr><td>4</td><td>Barangay Clearance (if change of location)</td><td>1 original</td><td><span class="badge badge-opt">If applicable</span></td></tr>
+          <tr><td>5</td><td>Locational/Zoning Clearance (if change of location)</td><td>1 original</td><td><span class="badge badge-opt">If applicable</span></td></tr>
+          <tr><td>6</td><td>Valid ID of the owner/authorized representative</td><td>1 photocopy</td><td><span class="badge badge-req">Required</span></td></tr>
+        </tbody>
+      </table>
+      <div class="note-box">✏️ <strong>Note:</strong> Changes must be reported to BPLD within 15 days from the date of change. Failure to update records may result in penalties.</div>
+    </div>
+
+    <!-- SPECIAL PERMIT -->
+    <div class="req-panel" id="tab-special">
+      <table class="req-table">
+        <thead>
+          <tr><th>#</th><th>Documentary Requirement</th><th>Copies</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Letter of Request addressed to the City Mayor (for Mayor's Permit)</td><td>1 original</td><td><span class="badge badge-req">Required</span></td></tr>
+          <tr><td>2</td><td>Duly accomplished Special Permit Application Form</td><td>1 original</td><td><span class="badge badge-req">Required</span></td></tr>
+          <tr><td>3</td><td>Valid Government-issued ID of applicant</td><td>1 photocopy</td><td><span class="badge badge-req">Required</span></td></tr>
+          <tr><td>4</td><td>Barangay Clearance (for the location of the event/activity)</td><td>1 original</td><td><span class="badge badge-req">Required</span></td></tr>
+          <tr><td>5</td><td>Police Clearance (for events involving public assembly)</td><td>1 original</td><td><span class="badge badge-opt">If applicable</span></td></tr>
+          <tr><td>6</td><td>Supporting documents relevant to the type of special permit</td><td>As needed</td><td><span class="badge badge-opt">If applicable</span></td></tr>
+        </tbody>
+      </table>
+      <div class="note-box">🪙 <strong>Note:</strong> Special permits are processed on a case-by-case basis. Processing time may vary depending on the nature of the application. Please allow sufficient lead time before your intended date of operation.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DOWNLOADABLE FORMS ===== -->
+<section class="section" id="forms">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Downloads</div>
+      <h2 class="section-title">Downloadable Forms &amp; Documents</h2>
+      <div class="divider"></div>
+      <p class="section-desc" style="margin-top:16px;">Download and print the forms you need before visiting our office to save time.</p>
+    </div>
+
+    <div class="forms-grid">
+      <div class="form-card">
+        <div class="form-card-icon">📋</div>
+        <h4>Business Permit Application Form</h4>
+        <p>For new business permit applicants. Fill out completely before submission.</p>
+        <!-- TO EDIT: Replace href="#" with the actual Google Drive or direct link to the file -->
+        <a href="#" class="btn btn-blue">⬇️ Download Form</a>
+      </div>
+      <div class="form-card">
+        <div class="form-card-icon">📊</div>
+        <h4>Business Survey Form</h4>
+        <p>Required survey form for all business permit applicants.</p>
+        <!-- TO EDIT: Replace href="#" with actual link -->
+        <a href="#" class="btn btn-blue">⬇️ Download Form</a>
+      </div>
+      <div class="form-card">
+        <div class="form-card-icon">🔄</div>
+        <h4>Business Permit Renewal Form</h4>
+        <p>Annual renewal form for existing business permit holders.</p>
+        <!-- TO EDIT: Replace href="#" with actual link -->
+        <a href="#" class="btn btn-blue">⬇️ Download Form</a>
+      </div>
+      <div class="form-card">
+        <div class="form-card-icon">🚪</div>
+        <h4>Business Retirement Form</h4>
+        <p>For businesses that are closing or ceasing operations.</p>
+        <!-- TO EDIT: Replace href="#" with actual link -->
+        <a href="#" class="btn btn-blue">⬇️ Download Form</a>
+      </div>
+      <div class="form-card">
+        <div class="form-card-icon">✏️</div>
+        <h4>Change of Business Information Form</h4>
+        <p>To update business name, address, ownership, or other details.</p>
+        <!-- TO EDIT: Replace href="#" with actual link -->
+        <a href="#" class="btn btn-blue">⬇️ Download Form</a>
+      </div>
+      <div class="form-card">
+        <div class="form-card-icon">📜</div>
+        <h4>Sworn Statement / Affidavit Template</h4>
+        <p>For gross sales declaration and other sworn statements required by BPLD.</p>
+        <!-- TO EDIT: Replace href="#" with actual link -->
+        <a href="#" class="btn btn-blue">⬇️ Download Form</a>
+      </div>
+    </div>
+
+    <div class="forms-note">
+      💡 <strong>How to add new forms:</strong> Open <code>index.html</code>, find the <code>&lt;!-- TO EDIT --&gt;</code> comment above each download button, and replace <code>href="#"</code> with the actual link to your file (e.g., a Google Drive shareable link). You can also add new <code>&lt;div class="form-card"&gt;</code> blocks by copying any existing card.
+    </div>
+  </div>
+</section>
+
+<!-- ===== GRADUATED FEES ===== -->
+<section class="section section--alt" id="fees">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Fee Schedule</div>
+      <h2 class="section-title">Graduated Fees</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="fees-intro">
+      <div>
+        <strong style="font-size:1.05rem;color:var(--white);">Business Permit Fee Schedule</strong>
+        <p>Fees are assessed based on the nature and gross receipts of the business in accordance with the Revenue Code of Cagayan de Oro City.</p>
+      </div>
+      <!-- TO EDIT: Replace href="#" with a link to the official PDF fee schedule -->
+      <a href="#" class="btn btn-primary">📥 Download Full Fee Schedule (PDF)</a>
+    </div>
+
+    <div class="fees-table-wrap">
+      <table class="fees-table">
+        <thead>
+          <tr>
+            <th>Gross Sales / Receipts (Annual)</th>
+            <th>Business Category</th>
+            <th>Basis</th>
+            <th>Permit Fee</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Up to ₱10,000</td>
+            <td>Micro-enterprise</td>
+            <td>Flat rate</td>
+            <td>₱ — (to be filled)</td>
+          </tr>
+          <tr>
+            <td>₱10,001 – ₱50,000</td>
+            <td>Small Business</td>
+            <td>Graduated</td>
+            <td>₱ — (to be filled)</td>
+          </tr>
+          <tr>
+            <td>₱50,001 – ₱150,000</td>
+            <td>Small Business</td>
+            <td>Graduated</td>
+            <td>₱ — (to be filled)</td>
+          </tr>
+          <tr>
+            <td>₱150,001 – ₱500,000</td>
+            <td>Medium Enterprise</td>
+            <td>Graduated</td>
+            <td>₱ — (to be filled)</td>
+          </tr>
+          <tr>
+            <td>₱500,001 – ₱1,000,000</td>
+            <td>Medium Enterprise</td>
+            <td>Graduated</td>
+            <td>₱ — (to be filled)</td>
+          </tr>
+          <tr>
+            <td>₱1,000,001 – ₱2,000,000</td>
+            <td>Large Enterprise</td>
+            <td>Graduated</td>
+            <td>₱ — (to be filled)</td>
+          </tr>
+          <tr>
+            <td>Over ₱2,000,000</td>
+            <td>Large Enterprise</td>
+            <td>Graduated</td>
+            <td>₱ — (to be filled)</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4">* Fees are subject to change. Refer to the latest Revenue Code of Cagayan de Oro City or contact BPLD for the current fee schedule. Additional regulatory fees from other agencies may apply.</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <div class="note-box" style="margin-top:24px;">
+      📌 <strong>How to encode fees:</strong> Open <code>index.html</code>, find the <code>&lt;tbody&gt;</code> section inside the fees table, and replace the <em>"₱ — (to be filled)"</em> text with the actual fee amounts from your Revenue Code. You may also add or remove rows as needed.
+    </div>
+  </div>
+</section>
+
+<!-- ===== ANNOUNCEMENTS ===== -->
+<section class="section" id="announcements">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">News &amp; Updates</div>
+      <h2 class="section-title">Announcements &amp; Advisories</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="announcements-grid">
+      <div class="ann-list">
+
+        <!-- ANNOUNCEMENT CARD — copy & paste this block to add new ones -->
+        <div class="ann-card">
+          <div class="ann-tag-col">
+            <div class="ann-tag ann-tag--advisory">Advisory</div>
+            <div class="ann-date">May 2025</div>
+          </div>
+          <div class="ann-body">
+            <h4>2025 Business Permit Renewal: Important Reminders</h4>
+            <p>All business establishments in Cagayan de Oro City are reminded to complete their annual permit renewal. Please ensure all documentary requirements are prepared before visiting the BOSS Office.</p>
+            <a href="#">Read more →</a>
+          </div>
+        </div>
+
+        <div class="ann-card">
+          <div class="ann-tag-col">
+            <div class="ann-tag ann-tag--deadline">Deadline</div>
+            <div class="ann-date">Jan 2025</div>
+          </div>
+          <div class="ann-body">
+            <h4>Deadline Reminder: Business Permit Renewal Cut-Off</h4>
+            <p>The deadline for business permit renewal without surcharge is January 31, 2025. Renewals filed after this date will be subject to 25% surcharge plus 2% monthly interest.</p>
+            <a href="#">Read more →</a>
+          </div>
+        </div>
+
+        <div class="ann-card">
+          <div class="ann-tag-col">
+            <div class="ann-tag ann-tag--update">Update</div>
+            <div class="ann-date">Dec 2024</div>
+          </div>
+          <div class="ann-body">
+            <h4>New Requirements for 2025 Business Permit Applications</h4>
+            <p>Effective January 2025, additional requirements are now needed for certain business categories. Please check the updated requirements list or contact our office for details.</p>
+            <a href="#">Read more →</a>
+          </div>
+        </div>
+
+        <div class="ann-card">
+          <div class="ann-tag-col">
+            <div class="ann-tag ann-tag--schedule">Schedule</div>
+            <div class="ann-date">Dec 2024</div>
+          </div>
+          <div class="ann-body">
+            <h4>Holiday Office Hours – December 2024</h4>
+            <p>The BPLD office will be closed on December 25, 30 (Rizal Day), and January 1, 2025 (New Year's Day). Regular services resume on the next business day. Merry Christmas from BPLD!</p>
+            <a href="#">Read more →</a>
+          </div>
+        </div>
+        <!-- END ANNOUNCEMENT CARD -->
+
+      </div>
+
+      <div>
+        <div class="ann-sidebar-card">
+          <h4>Quick Links</h4>
+          <div class="quick-links">
+            <a href="#forms" class="quick-link">📄 Business Permit Form</a>
+            <a href="#forms" class="quick-link">📊 Survey Form</a>
+            <a href="#requirements" class="quick-link">📌 Requirements</a>
+            <a href="#fees" class="quick-link">💰 Fee Schedule</a>
+            <a href="#contact" class="quick-link">📞 Contact Us</a>
+          </div>
+        </div>
+        <div class="office-hours-card">
+          <h4>🕐 Office Hours</h4>
+          <div class="hours-row"><span>Monday – Friday</span><strong>8:00 AM – 5:00 PM</strong></div>
+          <div class="hours-row"><span>Saturday</span><strong>Closed</strong></div>
+          <div class="hours-row"><span>Sunday</span><strong>Closed</strong></div>
+          <div class="hours-row"><span>Holidays</span><strong>Closed</strong></div>
+          <br>
+          <p style="font-size:.8rem;color:var(--navy);opacity:.75;">⚠️ Hours may change during renewal season. Check announcements for updates.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="section section--alt" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Get in Touch</div>
+      <h2 class="section-title">Contact Us</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="contact-grid">
+      <div>
+        <div class="contact-info-block">
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <h4>Office Address</h4>
+              <p>Business Permits and Licensing Division<br>Capistrano-Hayes St., Barangay 2<br>BOSS Office, City Hall Compound<br>Cagayan de Oro City, 9000</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div>
+              <h4>Contact Numbers</h4>
+              <p><a href="tel:09367888793">0936-788-8793</a></p>
+              <p><a href="tel:09468071193">0946-807-1193</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <h4>Email Address</h4>
+              <p><a href="mailto:cdocbpld@gmail.com">cdocbpld@gmail.com</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🕐</div>
+            <div>
+              <h4>Office Hours</h4>
+              <p>Monday – Friday: 8:00 AM – 5:00 PM<br>Weekends &amp; Holidays: Closed</p>
+            </div>
+          </div>
+        </div>
+
+        <br>
+        <h4 style="font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gray);margin-bottom:12px;">Follow Us on Social Media</h4>
+        <div class="social-row" style="flex-wrap:wrap;">
+          <!-- TO EDIT: Replace href="#" with actual social media page links -->
+          <a href="#" class="social-btn social-btn--fb" target="_blank">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            Facebook
+          </a>
+          <a href="#" class="social-btn social-btn--x" target="_blank">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            X / Twitter
+          </a>
+          <a href="#" class="social-btn social-btn--ig" target="_blank">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            Instagram
+          </a>
+          <a href="#" class="social-btn social-btn--yt" target="_blank">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg>
+            YouTube
+          </a>
+        </div>
+
+        <br>
+        <div class="map-placeholder">
+          <div class="map-icon">🗺️</div>
+          <p><strong>City Hall Compound, Cagayan de Oro City</strong><br>
+          To embed a Google Map: go to <a href="https://maps.google.com" target="_blank" style="color:var(--mid-blue)">maps.google.com</a>,<br>search the address, click Share → Embed a map,<br>and paste the iframe code here.</p>
+        </div>
+      </div>
+
+      <div class="contact-form-card">
+        <h3>Send Us a Message</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" placeholder="Juan" />
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" placeholder="dela Cruz" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="femail">Email Address</label>
+          <input type="email" id="femail" placeholder="juan@email.com" />
+        </div>
+        <div class="form-group">
+          <label for="fphone">Contact Number</label>
+          <input type="tel" id="fphone" placeholder="09XX-XXX-XXXX" />
+        </div>
+        <div class="form-group">
+          <label for="fsubject">Subject / Concern</label>
+          <select id="fsubject">
+            <option value="">— Select your concern —</option>
+            <option>New Business Permit Application</option>
+            <option>Business Permit Renewal</option>
+            <option>Business Retirement</option>
+            <option>Change of Business Information</option>
+            <option>Inquiry about Requirements</option>
+            <option>Inquiry about Fees</option>
+            <option>Other Concerns</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="fmsg">Message</label>
+          <textarea id="fmsg" placeholder="Type your message or inquiry here..."></textarea>
+        </div>
+        <p style="font-size:.78rem;color:var(--gray);margin-bottom:12px;">
+          💡 <em>To make this form functional, connect it to <a href="https://formspree.io" target="_blank" style="color:var(--mid-blue)">Formspree.io</a> (free) or replace with a Google Form embed.</em>
+        </p>
+        <button class="btn btn-primary" style="width:100%;justify-content:center;" onclick="alert('Thank you for your message! This form will be connected to BPLD\'s email soon. For urgent concerns, please contact us directly at cdocbpld@gmail.com')">
+          ✉️ Send Message
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-brand-logo">BPLD</div>
+        <h3>Business Permits &amp; Licensing Division</h3>
+        <p>Capistrano-Hayes St., Barangay 2<br>BOSS Office, City Hall Compound<br>Cagayan de Oro City, 9000<br><br>Official government office for business permit processing in CDO.</p>
+        <div class="footer-social" style="margin-top:16px;">
+          <a href="#" target="_blank" title="Facebook">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" target="_blank" title="X">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" target="_blank" title="Instagram">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/></svg>
+          </a>
+          <a href="#" target="_blank" title="YouTube">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#about">About BPLD</a>
+          <a href="#requirements">Requirements</a>
+          <a href="#forms">Download Forms</a>
+          <a href="#fees">Graduated Fees</a>
+          <a href="#announcements">Announcements</a>
+          <a href="#contact">Contact Us</a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Services</h4>
+        <div class="footer-links">
+          <a href="#requirements">New Application</a>
+          <a href="#requirements">Permit Renewal</a>
+          <a href="#requirements">Business Retirement</a>
+          <a href="#requirements">Change of Info</a>
+          <a href="#requirements">Special Permits</a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <div class="footer-links" style="gap:12px;">
+          <span style="font-size:.85rem;line-height:1.6;">📍 Capistrano-Hayes St., Brgy. 2, BOSS Office, City Hall Compound, CDO City, 9000</span>
+          <a href="tel:09367888793">📞 0936-788-8793</a>
+          <a href="tel:09468071193">📞 0946-807-1193</a>
+          <a href="mailto:cdocbpld@gmail.com">✉️ cdocbpld@gmail.com</a>
+          <span style="font-size:.85rem;">🕐 Mon–Fri, 8AM–5PM</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2025 Business Permits and Licensing Division, Cagayan de Oro City. All rights reserved.</span>
+      <div style="display:flex;gap:16px;">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Accessibility</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+  /* ---- Hamburger Menu ---- */
+  const ham = document.getElementById('hamburger');
+  const mmenu = document.getElementById('mobile-menu');
+  ham.addEventListener('click', () => {
+    mmenu.classList.toggle('open');
+    ham.querySelectorAll('span')[1].style.opacity = mmenu.classList.contains('open') ? '0' : '1';
+  });
+  mmenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => mmenu.classList.remove('open'));
+  });
+
+  /* ---- Active Nav Link on Scroll ---- */
+  const sections = document.querySelectorAll('section[id], div[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 90) current = s.id;
+    });
+    navLinks.forEach(a => {
+      a.classList.remove('active');
+      if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+    });
+    // Back to top
+    document.getElementById('backTop').classList.toggle('show', window.scrollY > 400);
+  });
+
+  /* ---- Requirements Tabs ---- */
+  document.querySelectorAll('.req-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.req-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.req-panel').forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      const panel = document.getElementById('tab-' + tab.dataset.tab);
+      if (panel) panel.classList.add('active');
+    });
+  });
+
+  /* ---- Fade-in on Scroll ---- */
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.ann-card, .form-card, .mv-card, .stat-card, .hero-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity .5s ease, transform .5s ease';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
